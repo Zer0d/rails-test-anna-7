@@ -3,13 +3,13 @@ require 'whenever/capistrano'
 set :whenever_command, "bundle exec whenever"
 
 #setup multistage environments, https://github.com/capistrano/capistrano/wiki/2.x-Multistage-Extension
-set :stages, <stages>
+set :stages, %w(Test-test)
 set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 
-set :application, '<appname>'
+set :application, 'rails-test-anna-7'
 set :scm, :git
-set :repository,  '<repository_location>'
+set :repository,  'https://github.com/Zer0d/rails-test-anna-7.git'
 
 
 namespace :deploy do
